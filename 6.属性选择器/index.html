@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习属性选择器</title>
+    <style>
+        .demo a{
+            float: left;
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            background: blue;
+            text-align: center;
+            color: gainsboro;
+            text-decoration: none;
+            margin-right: 5px;
+            line-height: 50px;
+        }
+
+        /* 存在id属性的元素 */
+        /*a[id]{*/
+        /*    background: greenyellow;*/
+        /*}*/
+
+        /* id为first属性的元素 */
+        /*a[id=first]{*/
+        /*    background: red;*/
+        /*}*/
+
+        /* 选择class中包含links的属性 */
+        /*a[class*="links"]{*/
+        /*    background: yellow;*/
+        /*}*/
+
+        /* 选择以某个字符串开头的属性 */
+        /*a[href^="http"]{*/
+        /*    background: yellow;*/
+        /*}*/
+
+        /* 选择以某个字符串结尾的属性 */
+        a[href$="doc"]{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<p class="demo">
+    <a href="http://www.baidu.com" class="links item first" id="first">1</a>
+    <a href="" class="links item active" target="_blank" title="test">2</a>
+    <a href="images/123.html" class="links item">3</a>
+    <a href="images/123.png" class="links item">4</a>
+    <a href="images/123.jpg" class="links item">5</a>
+    <a href="abc">6</a>
+    <a href="/a.pdf">7</a>
+    <a href="/abc.pdf">8</a>
+    <a href="abc.doc">9</a>
+    <a href="abc.doc" class="links item last">10</a>
+</p>
+</body>
+</html>
